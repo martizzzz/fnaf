@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Moja strona</title>
+		<link rel="stylesheet" href="style.css" />
+
+		<style>
+			html,
+			body {
+				height: 100%;
+				margin: 0;
+			}
+
+			body {
+				display: flex;
+				flex-direction: column; /* ustawia elementy jeden pod drugim */
+				justify-content: center; /* wyśrodkowanie pionowe */
+				align-items: center; /* wyśrodkowanie poziome */
+				background-color: #9591e3;
+			}
+
+			h1 {
+				font-size: 48px;
+				text-align: center;
+			}
+
+			p {
+				font-size: 24px;
+				text-align: center;
+			}
+
+			img {
+				width: 400px;
+				height: auto;
+				margin-bottom: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<audio id="muzyka" loop>
+			<source src="music2.mp3" type="audio/mpeg" />
+			Twoja przeglądarka nie obsługuje elementu audio.
+		</audio>
+		<script>
+			document.addEventListener('click', function startOnce() {
+				const audio = document.getElementById('muzyka')
+				audio.play()
+				document.removeEventListener('click', startOnce) // tylko raz
+			})
+		</script>
+	<h1 class="uzytkownik">Pyt #4</h1>
+    <p class="o-tekst">Czy freddy to sigma?</p>
+		
+	
+	<img src= "freddy-raised-eyebrow.gif">
+	<div class="rzad"> 
+		<button class="play" onclick="window.location.href='5.html';">tak</button>
+		<button class="quit"onclick="window.location.href='5.html';">tak</button>
+	  </div>
+      
+        
+	</body>
+</html>
